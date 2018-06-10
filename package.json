@@ -1,0 +1,19 @@
+{
+  "name": "maze-master",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidAPowers/maze-master.git"
+  },
+  "author": "David A. Powers",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DavidAPowers/maze-master/issues"
+  },
+  "homepage": "https://github.com/DavidAPowers/maze-master#readme"
+}
