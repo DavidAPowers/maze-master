@@ -90,35 +90,5 @@ describe('Dice', () => {
 			expect(bad).toEqual(0);
 		});
 	});  
-	describe('.rollStats(stats,dice)', () => {
-		it('Given invalid data, should return new Lead', () => {
 
-			for(let i=0;i<10000;i++) {
-				let stats = Dice.rollStats(['str','int','wis','dex','con','cha'],'3d6');
-				expect(stats.str>2&&stats.str<19).toEqual(true);
-				expect(stats.int>2&&stats.int<19).toEqual(true);
-				expect(stats.wis>2&&stats.wis<19).toEqual(true);
-				expect(stats.dex>2&&stats.dex<19).toEqual(true);
-				expect(stats.con>2&&stats.con<19).toEqual(true);
-				expect(stats.cha>2&&stats.cha<19).toEqual(true);				
-			}
-			console.log(Dice.rollStats(['str','int','wis','dex','con','cha'],'3d6'));
-			//given a string instead of an array, returns object with single named property
-			let ok = Dice.rollStats('gold','2d6');
-			expect(ok.gold>1&&ok.gold<13).toEqual(true);
-			console.log(`gold: ${ok.gold}`);			
-			//given malformed dice string, returns value 0
-			let bad = Dice.rollStats('bad','fdg');
-			expect(bad.bad).toEqual(0);			
-
-			let pc = Object.assign({ability_scores: Dice.rollStats(['str','int','wis','dex','con','cha'],'3d6')},
-				Dice.rollStats('hp','1d6'),
-				Dice.rollStats('gold','10d6'),
-			);
-			console.log(pc);			
-			expect(pc.gold>9).toEqual(true);			
-			expect(pc.ability_scores.str>2&&pc.ability_scores.str<19).toEqual(true);			
-
-		});
-	});    
 });
