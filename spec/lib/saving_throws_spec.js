@@ -1,5 +1,6 @@
 "use strict";
 const SavingThrows = require('../../lib/saving_throws');
+const CharClass = require('../../lib/char_class');
 
 describe('SavingThrows', () => {
 	describe('.SAVES', () => {
@@ -18,7 +19,7 @@ describe('SavingThrows', () => {
 	});
 	describe('.save(char_class)', () => {
 		it('Returns first level saving throws object for given class', () => {
-			let saves = SavingThrows.FIGHTER;
+			let saves = SavingThrows.saves(CharClass.FIGHTER);
 			expect(saves["POISON or DEATH RAY"]).toEqual(12);
 			expect(saves["MAGIC WAND"]).toEqual(13);
 			expect(saves["TURN TO STONE or PARALYSIS"]).toEqual(14);

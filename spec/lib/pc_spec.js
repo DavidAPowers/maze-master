@@ -1,5 +1,6 @@
 "use strict";
 const Pc = require('../../lib/pc');
+const CharClass = require('../../lib/char_class');
 
 describe('Pc', () => {
 	describe('.highest(stats)', () => {
@@ -14,11 +15,11 @@ describe('Pc', () => {
 			let c3 = Pc.pickCharClass(stats3);
 			let c4 = Pc.pickCharClass(stats4);
 			let c5 = Pc.pickCharClass(stats5);
-			expect(c1).toEqual(Pc.THIEF);
-			expect(c2).toEqual(Pc.MAGIC_USER);
-			expect(c3).toEqual(Pc.CLERIC);
-			expect(c4).toEqual(Pc.FIGHTER);
-			expect(c5).toEqual(Pc.FIGHTER);
+			expect(c1).toEqual(CharClass.THIEF);
+			expect(c2).toEqual(CharClass.MAGIC_USER);
+			expect(c3).toEqual(CharClass.CLERIC);
+			expect(c4).toEqual(CharClass.FIGHTER);
+			expect(c5).toEqual(CharClass.FIGHTER);
 		});
 	});
 	describe('.rollStats(stats,dice)', () => {
@@ -47,10 +48,10 @@ describe('Pc', () => {
 	describe('.rollHp(char_class)', () => {
 		it('Given a list of ability scores, returns highest ability', () => {
 			for(let i=0;i<10000;i++) {
-				let hp = [Pc.rollHp(Pc.CLERIC),
-					Pc.rollHp(Pc.FIGHTER),
-					Pc.rollHp(Pc.MAGIC_USER),
-					Pc.rollHp(Pc.THIEF)];
+				let hp = [Pc.rollHp(CharClass.CLERIC),
+					Pc.rollHp(CharClass.FIGHTER),
+					Pc.rollHp(CharClass.MAGIC_USER),
+					Pc.rollHp(CharClass.THIEF)];
 					expect(hp[0].hp > 0 && hp[0].hp < 7).toEqual(true);
 					expect(hp[1].hp > 0 && hp[1].hp < 9).toEqual(true);
 					expect(hp[2].hp > 0 && hp[2].hp < 5).toEqual(true);
@@ -58,7 +59,7 @@ describe('Pc', () => {
 			}
 		});
 	});	 	
-	describe('.generate()', () => {
+	describe('.pregen()', () => {
 		it('Given a list of ability scores, returns highest ability', () => {
 			let pc = Pc.pregen();
 			console.log(pc);			
