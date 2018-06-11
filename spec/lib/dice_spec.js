@@ -110,6 +110,15 @@ describe('Dice', () => {
 			//given malformed dice string, returns value 0
 			let bad = Dice.rollStats('bad','fdg');
 			expect(bad.bad).toEqual(0);			
+
+			let pc = Object.assign({ability_scores: Dice.rollStats(['str','int','wis','dex','con','cha'],'3d6')},
+				Dice.rollStats('hp','1d6'),
+				Dice.rollStats('gold','10d6'),
+			);
+			console.log(pc);			
+			expect(pc.gold>9).toEqual(true);			
+			expect(pc.ability_scores.str>2&&pc.ability_scores.str<19).toEqual(true);			
+
 		});
 	});    
 });
