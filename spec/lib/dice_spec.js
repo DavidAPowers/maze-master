@@ -22,7 +22,7 @@ describe('Dice', () => {
 			}
 			
 			let mean = total1 / 10000;
-			console.log(`mean: ${mean}`);
+			//console.log(`mean: ${mean}`);
 			expect((mean>3) && (mean<4)).toEqual(true);
 			
 			let rolls2 = [];
@@ -35,7 +35,7 @@ describe('Dice', () => {
 				expect((rolls2[el]>0) && (rolls2[el]<21)).toEqual(true);
 			}
 			let mean2 = total2 / 20000;
-			console.log(`mean2: ${mean2}`);
+			//console.log(`mean2: ${mean2}`);
 			expect(mean2>10 && mean2<11).toEqual(true);
 			
 		});
@@ -52,7 +52,7 @@ describe('Dice', () => {
 				expect((rolls[i]>2) && (rolls[i]<19)).toEqual(true);
 			}	    	
 			let mean = t / 10000;
-			console.log(`3d6 mean: ${mean}`);
+			//console.log(`3d6 mean: ${mean}`);
 			expect((mean>10) && (mean<11)).toEqual(true);
 
 		});
