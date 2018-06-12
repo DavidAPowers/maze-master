@@ -84,7 +84,7 @@ describe('Dice', () => {
 			}	    	
 			let mean = t / 10000;
 			console.log(`3d6 mean: ${mean}`);
-			expect((mean>10.4) && (mean<10.6)).toEqual(true);
+			expect((mean>10.3) && (mean<10.7)).toEqual(true);
 
 			let bad = Dice.roll('gibberish');
 			expect(bad).toEqual(0);
