@@ -1,6 +1,6 @@
 # maze-master
 
-This app is designed to assist old school RPG Judges who are creating campaigns. App functionality will eventually be accessible via a rest API.
+This app is built using Node and Express. It is designed to assist old school RPG Judges who are creating campaigns. App functionality will eventually be accessible via a rest API.
 
 Current API routes:
 
@@ -31,7 +31,7 @@ Valid dice roll format is `{number}d{sides}`.
 
 ## Testing the app ##
  
-After installing dependencies via npm, run `npm test` from the command line
+The app uses Jest for unit tests and Supertest for Express controller integration tests. After installing dependencies via npm, run `npm test` from the command line
 
 ## Running the app locally ##
 
