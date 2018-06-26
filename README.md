@@ -23,7 +23,7 @@ Valid dice roll format is `{number}d{sides}`.
 * `1d10` is valid, and represents a roll of one ten-sided dice. 
 * `3d20` is valid, and represents a roll of three twenty-sided dice. 
 
-### Valid Dice Roll Strings ###
+### Invalid Dice Roll Strings ###
 
 *  `d6` is invalid
 *  `2d` is invalid
