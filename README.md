@@ -5,12 +5,15 @@ This app is built using Node and Express. It is designed to assist old school RP
 Current API routes:
 
 * /   
+
   `returns pregenerated first-level PC in JSON format`
 
 * /roll   
+
   `returns a '3d6' dice roll (3 six-sided dice)`
 
 * /roll/:dice
+
   `returns an integer result of simulated dice roll if ':dice' is valid, otherwise returns 0`
 
 ## Dice Roll Format ##
