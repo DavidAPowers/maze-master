@@ -6,9 +6,11 @@ Current API routes:
 
 * /   
 
-  ```
-  returns randomly generated first-level PC in JSON format, example character:
+  `Returns randomly generated first-level human PC, based on rules given in 1984 Basic D&D example character.`
 
+Example character:
+	
+	```
  	{ char_class: 'Cleric',
         ability_scores: { str: 10, int: 7, wis: 11, dex: 11, con: 9, cha: 5 },
         hp: 4,
