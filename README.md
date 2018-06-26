@@ -10,7 +10,7 @@ Current API routes:
 
 Example character:
 	
-	```
+```
  	{ char_class: 'Cleric',
         ability_scores: { str: 10, int: 7, wis: 11, dex: 11, con: 9, cha: 5 },
         hp: 4,
@@ -21,7 +21,7 @@ Example character:
            'DRAGON BREATH': 16,
            'SPELLS or MAGIC STAFF': 15 },
         gold: 110 }
-  ```
+```
 
 * /roll   
 
