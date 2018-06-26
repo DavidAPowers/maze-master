@@ -6,7 +6,7 @@ Current API routes:
 
 * /   
 
-  `Returns randomly generated first-level human PC in JSON format, based on rules given in 1984 Basic D&D example character.`
+  `Returns randomly generated first-level human PC in JSON format, based on rules given in 1984 Basic D&D.`
 
 Example of JSON for a randomly generated character:
 	
