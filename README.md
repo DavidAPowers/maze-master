@@ -6,7 +6,20 @@ Current API routes:
 
 * /   
 
-  `returns pregenerated first-level PC in JSON format`
+  ```
+  returns randomly generated first-level PC in JSON format, example character:
+
+ 	{ char_class: 'Cleric',
+        ability_scores: { str: 10, int: 7, wis: 11, dex: 11, con: 9, cha: 5 },
+        hp: 4,
+        saves:
+         { 'POISON or DEATH RAY': 11,
+           'MAGIC WAND': 12,
+           'TURN TO STONE or PARALYSIS': 14,
+           'DRAGON BREATH': 16,
+           'SPELLS or MAGIC STAFF': 15 },
+        gold: 110 }
+  ```
 
 * /roll   
 
