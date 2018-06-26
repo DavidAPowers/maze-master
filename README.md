@@ -35,4 +35,9 @@ The app uses Jest for unit tests and Supertest for Express controller integratio
 
 ## Running the app locally ##
 
-After installing dependencies via npm, run `npm start` from the command line, and view the app at `localhost:3000`
+After installing dependencies via npm, run `npm start` from the command line, and view the app at `localhost:3000`. The following routes are available:
+
+* `localhost:3000/`
+* `localhost:3000/roll`
+* `localhost:3000/roll/3d6`
+* `localhost:3000/roll/{:dice}`
