@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "mocha ./tests --recursive"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/DavidAPowers/maze-master/issues"
   },
-  "homepage": "https://github.com/DavidAPowers/maze-master#readme",  
+  "homepage": "https://github.com/DavidAPowers/maze-master#readme",
   "dependencies": {
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
@@ -25,7 +25,10 @@
     "pug": "^2.0.3"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
-    "mocha": "^5.2.0"
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^23.2.0",
+    "superagent": "^3.8.3",
+    "supertest": "^3.1.0"
   }
 }
