@@ -2,18 +2,20 @@ const request = require('supertest');
 const app = require('../../app');
 
 describe('Test the root path', () => {
-    test('It should response the GET method', () => {
+    test('It should respond to GET', () => {
         return request(app).get('/').expect(200);
     });
-})
-/*
-describe('Controller', function() {
-    describe('roll3d6() function', function() {
-        it('return integer between 3 and 18 ', function() {
-            roll3d6(req, res);
-            //expect(res.status).to.equal('error');
-            expect(res).to.equal('error');
-        });
-    })
 });
-*/
+describe('Test the root path', () => {
+    test('It should respond to GET', () => {
+        return request(app).get('/roll').expect(200);
+    });
+});
+describe('Test the /roll/:dice path', () => {
+    test('It should respond to GET', () => {
+        return request(app).get('/roll/2d6').expect(200);
+    });
+    test('It should respond to GET', () => {
+        return request(app).get('/roll/asdfsdf').expect(200);
+    });    
+});

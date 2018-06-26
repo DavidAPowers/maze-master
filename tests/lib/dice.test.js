@@ -1,5 +1,4 @@
 "use strict";
-const expect = require('chai').expect;
 const Dice = require('../../lib/dice');
 
 describe('Dice', () => {
@@ -8,9 +7,9 @@ describe('Dice', () => {
 			let r1 = Dice.rollOne(6);
 			let r2 = Dice.rollOne(6);
 			let r3 = Dice.rollOne(6);
-			expect((r1>0) && (r1<7)).to.equal(true);
-			expect((r2>0) && (r2<7)).to.equal(true);
-			expect((r3>0) && (r3<7)).to.equal(true);
+			expect((r1>0) && (r1<7)).toEqual(true);
+			expect((r2>0) && (r2<7)).toEqual(true);
+			expect((r3>0) && (r3<7)).toEqual(true);
 
 			let rolls1 = [];
 			let total1 = 0;
@@ -19,12 +18,12 @@ describe('Dice', () => {
 			}
 			for(let i in rolls1) {
 				total1 = total1 + rolls1[i];
-				expect((rolls1[i]>0) && (rolls1[i]<7)).to.equal(true);
+				expect((rolls1[i]>0) && (rolls1[i]<7)).toEqual(true);
 			}
 			
 			let mean = total1 / 10000;
 			//console.log(`mean: ${mean}`);
-			expect((mean>3) && (mean<4)).to.equal(true);
+			expect((mean>3) && (mean<4)).toEqual(true);
 			
 			let rolls2 = [];
 			for(let ib=0;ib<20000;ib++) {
@@ -33,11 +32,11 @@ describe('Dice', () => {
 			let total2 = 0;
 			for(let el in rolls2) {
 				total2 += rolls2[el];
-				expect((rolls2[el]>0) && (rolls2[el]<21)).to.equal(true);
+				expect((rolls2[el]>0) && (rolls2[el]<21)).toEqual(true);
 			}
 			let mean2 = total2 / 20000;
 			//console.log(`mean2: ${mean2}`);
-			expect(mean2>10 && mean2<11).to.equal(true);
+			expect(mean2>10 && mean2<11).toEqual(true);
 			
 		});
 	});
@@ -50,11 +49,11 @@ describe('Dice', () => {
 			}
 			for(let i in rolls) {
 				t += rolls[i];
-				expect((rolls[i]>2) && (rolls[i]<19)).to.equal(true);
+				expect((rolls[i]>2) && (rolls[i]<19)).toEqual(true);
 			}	    	
 			let mean = t / 10000;
 			//console.log(`3d6 mean: ${mean}`);
-			expect((mean>10) && (mean<11)).to.equal(true);
+			expect((mean>10) && (mean<11)).toEqual(true);
 
 		});
 	});
@@ -65,11 +64,11 @@ describe('Dice', () => {
 			let f3 = Dice.validFormat('fhfdd0');
 			let f4 = Dice.validFormat('2d7');
 			let f5 = Dice.validFormat('23d23');
-			expect(f1).to.equal(true);
-			expect(f2).to.equal(false);
-			expect(f3).to.equal(false);
-			expect(f4).to.equal(true);
-			expect(f5).to.equal(true);
+			expect(f1).toEqual(true);
+			expect(f2).toEqual(false);
+			expect(f3).toEqual(false);
+			expect(f4).toEqual(true);
+			expect(f5).toEqual(true);
 		});
 	});
 	describe('.roll(dice)', () => {
@@ -81,14 +80,14 @@ describe('Dice', () => {
 			}
 			for(let i in rolls) {
 				t += rolls[i];
-				expect((rolls[i]>2) && (rolls[i]<19)).to.equal(true);
+				expect((rolls[i]>2) && (rolls[i]<19)).toEqual(true);
 			}	    	
 			let mean = t / 10000;
 			console.log(`3d6 mean: ${mean}`);
-			expect((mean>10.3) && (mean<10.7)).to.equal(true);
+			expect((mean>10.3) && (mean<10.7)).toEqual(true);
 
 			let bad = Dice.roll('gibberish');
-			expect(bad).to.equal(0);
+			expect(bad).toEqual(0);
 		});
 	});  
 
